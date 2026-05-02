@@ -28,11 +28,12 @@ urlpatterns = [
     path("", HomeView, name="Home"),
     path("menu", MenuView, name="Menu"),
     path("book_table", BookTableView, name="Book_Table"),
-    path("about", AboutView, name="About"),  
-    path("feedback", FeebackView, name="Feedback_Form"),  
+    path("about", AboutView, name="About"),
+    path("feedback", FeebackView, name="Feedback_Form"),
     path("login", LoginView, name="login"),
-    path("signup", SignUpView, name="signup"),          # <-- added
-    path("logout", auth_views.LogoutView.as_view(next_page='/'), name="logout"),] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path("signup", SignUpView, name="signup"),
+    path("logout", auth_views.LogoutView.as_view(next_page='/'), name="logout"),
+]
 
 
 if settings.DEBUG:
