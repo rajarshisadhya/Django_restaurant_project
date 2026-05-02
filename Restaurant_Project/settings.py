@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",  # ← only once
-    "cloudinary_storage",
+    "cloudinary_storage",        # ← before staticfiles
+    "django.contrib.staticfiles",
     "cloudinary",
     "Base_App",
 ]
