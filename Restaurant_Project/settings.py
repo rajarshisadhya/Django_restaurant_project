@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['django-restaurant-project-5a2k.onrender.com', 'localhost', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ['https://django-restaurant-project-5a2k.onrender.com']
+
 
 # Application definition
 
