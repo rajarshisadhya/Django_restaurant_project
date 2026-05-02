@@ -269,7 +269,9 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="{{j.Image.url}}" alt="{{j.Item_name}}">
+                  {% if j.Image %}
+<img src="{{j.Image.url}}" alt="{{j.Item_name}}">
+{% endif %}
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -391,7 +393,9 @@
                 </p>
               </div>
               <div class="img-box">
-                <img src="{{k.Image.url}}" alt="{{k.Item_name}}" class="box-img">
+                {% if k.Image %}
+<img src="{{k.Image.url}}" alt="{{k.User_name}}">
+{% endif %}
               </div>
             </div>
           </div>
