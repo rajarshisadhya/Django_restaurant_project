@@ -1,4 +1,7 @@
 from django.db import models
+import cloudinary
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 class ItemList(models.Model):
@@ -11,8 +14,8 @@ class Items(models.Model):
     Item_name = models.CharField(max_length=40)
     description = models.TextField(blank=False)
     Price = models.IntegerField()
-    Category = models.ForeignKey(ItemList, related_name="items", on_delete=models.CASCADE)
-    Image = models.ImageField(upload_to="Items/", blank=True, null=True)
+    Category = models.ForeignKey('ItemList', related_name="items", on_delete=models.CASCADE)
+    Image = CloudinaryField('image', blank=True, null=True)  # ← changed
 
     def __str__(self):
         return self.Item_name
@@ -27,7 +30,7 @@ class Feedback(models.Model):
     User_name = models.CharField(max_length=15)
     Description = models.TextField(blank=False)
     Rating = models.IntegerField()
-    Image = models.ImageField(upload_to="Items/", blank=True, null=True)
+    Image = CloudinaryField('image', blank=True, null=True)  # ← changed
 
     def __str__(self):
         return self.User_name

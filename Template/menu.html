@@ -25,7 +25,10 @@ block main %}
             <div>
               <div class="img-box">
                 {% if j.Image %}
-                <img src="{{j.Image.url}}" alt="{{j.Item_name}}" />
+                <img
+                  src="https://res.cloudinary.com/dvpsblwee/image/upload/{{j.Image}}"
+                  alt="{{j.Item_name}}"
+                />
                 {% endif %}
               </div>
               <div class="detail-box">
