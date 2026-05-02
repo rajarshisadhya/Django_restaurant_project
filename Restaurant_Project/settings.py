@@ -119,7 +119,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = []  # ← Leave empty, Django finds static files inside apps automatically
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR.parent, 'Static'),  # ← points to Restaurant/Static
+]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
